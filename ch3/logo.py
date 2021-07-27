@@ -4,9 +4,7 @@ import cv2 as cv
 img1 = cv.imread('./img/images1c.jpg')
 img2 = cv.imread('./img/images3c.jpg')
 #我想在左上角放置一个logo，所以我创建了一个 ROI,并且这个ROI的宽和高为我想放置的logo的宽和高
-h = img1.shape
 rows,cols,channels = img2.shape
-roi = img1[0:rows,0:cols]
 roi = img1[0:rows,0:cols]
 #现在创建一个logo的掩码，通过对logo图像进行阈值，并对阈值结果并创建其反转掩码
 img2gray = cv.cvtColor(img2,cv.COLOR_BGR2GRAY)
