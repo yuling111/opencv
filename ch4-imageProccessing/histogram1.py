@@ -37,7 +37,7 @@ plt.legend(('cdf', 'histogram'), loc='upper left'), plt.title('Histogram')
 
 # 使用OpenCV函数实现直方图均衡化
 img3 = cv2.equalizeHist(img)
-hist3, bins = np.histogram(img2.flatten(), 256, [0, 256])
+hist3, bins = np.histogram(img3.flatten(), 256, [0, 256])
 cdf3 = hist3.cumsum()
 cdf_m = cdf3 * hist3.max() / cdf3.max()
 
